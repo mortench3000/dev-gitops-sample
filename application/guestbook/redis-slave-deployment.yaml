@@ -10,7 +10,7 @@ spec:
       app: redis
       role: slave
       tier: backend
-  replicas: 2
+  replicas: 6
   template:
     metadata:
       labels:
@@ -24,7 +24,7 @@ spec:
         resources:
           requests:
             cpu: 100m
-            memory: 180Mi
+            memory: 250Mi
         env:
         - name: GET_HOSTS_FROM
           value: dns
